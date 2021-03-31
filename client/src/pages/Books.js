@@ -5,8 +5,6 @@ import { Input } from "../components/Form";
 import {SubmitBtn} from "../components/Search";
 import Result from "../components/Result";
 
-
-
   class Books extends Component {
     state = {
       books: [],
@@ -58,6 +56,7 @@ import Result from "../components/Result";
               <h1>Google Books Search</h1>
             </Jumbotron>
             <form>
+             
                     <h5>Search for books</h5>
                     <Input 
                         value={this.state.search}
@@ -67,7 +66,7 @@ import Result from "../components/Result";
                     />
                     <SubmitBtn onClick={this.handleFormSubmit}/>
                 </form>
-                
+               
                 {this.state.books.length ? (
                     <Result 
                     bookState={this.state.books}
@@ -79,6 +78,7 @@ import Result from "../components/Result";
                     <p style={{fontStyle: "italic"}}>No results to display</p>
                     </div>
                 )}
+              
            </>   
       )
   }
